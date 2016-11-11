@@ -1,5 +1,5 @@
 (function () {
-	const MAX_DELAY = 20;	// 切课时的最大延迟，单位：秒
+	const MAX_DELAY = 60;	// 切课时的最大延迟，单位：秒
 
 	let sleep = (time) => {
 	    return new Promise((resolve, reject) => {
@@ -24,7 +24,7 @@
 			if ($('.current_play').find('.progressbar').width() == $('.current_play').find('.progressbar_box').width()) {
 				console.log('本节完成，' + delay / 1000 + ' 秒后将切到下一课');
 				await sleep(delay);
-				$('.current_play').nextAll('.lesson')[0].click();
+				$('.current_play').nextAll('.video')[0].click();
 			}
 
 			await sleep(1000);
