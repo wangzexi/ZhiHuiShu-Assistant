@@ -25,7 +25,7 @@ chrome、或非IE浏览器的极速模式。
 
 看到 `智慧树助手已启动`，说明操作正确。
 
-![figure](figure.png)
+![img](img.png)
 
 ## 协议
 
