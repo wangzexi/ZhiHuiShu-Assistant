@@ -1,3 +1,4 @@
+
 (function () {
 	const MAX_DELAY = 60 // 切课时的最大延迟，单位：秒
 
@@ -5,6 +6,7 @@
 
 	const start = async function () {
 		console.log('智慧树助手已启动')
+
 		while (true) {
 			console.log('正在检查')
 			const delay = Math.floor(Math.random() * MAX_DELAY * 1000) + 1000
@@ -14,6 +16,16 @@
 				$('.speedTab15').click()
 			}
 
+			if (!/biaoqing_2/.test($('.definiBox').attr('style'))) {
+				console.log('更改画质')
+				$('.line1bq').click()
+			}
+
+			if ($('.volumeBox').find('.passVolume').width() != 0) {
+				console.log('静音')
+				$('.volumeIcon').click()
+			}
+			
 			if ($('.playButton').length > 0) {
 				console.log('点击播放')
 				$('.playButton').click()
