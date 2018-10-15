@@ -16,7 +16,7 @@
 				$('.speedTab15').click()
 			}
 
-			if (!/biaoqing_2/.test($('.definiBox').attr('style'))) {
+			if (!/liuchang/.test($('.definiBox').attr('style'))) {
 				console.log('更改画质')
 				$('.line1bq').click()
 			}
