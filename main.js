@@ -34,7 +34,7 @@
 			if ($('.popbtn_cancel')[0]) {
 				console.log('发现弹题，将在' + delay / 1000 + ' 秒后点击关闭')
 				await sleep(delay / 2)
-				$('.answerOption label').click()
+				$('.answerOption label')[0].click()
 				await sleep(delay / 2)
 				$('.popbtn_cancel').click()
 			}
