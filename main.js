@@ -34,7 +34,8 @@
 			if ($('.popbtn_cancel')[0]) {
 				console.log('发现弹题，将在' + delay / 1000 + ' 秒后点击关闭')
 				await sleep(delay / 2)
-				$('.answerOption label').click()
+				const iframe = document.getElementById('tmDialog_iframe').contentWindow
+				iframe.document.querySelector('.answerOption label').click()
 				await sleep(delay / 2)
 				$('.popbtn_cancel').click()
 			}
