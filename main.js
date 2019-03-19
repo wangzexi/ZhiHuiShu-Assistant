@@ -7,9 +7,11 @@
 	const start = async function () {
 		console.log('智慧树助手已启动')
 
+		let delay
+
 		while (true) {
 			console.log('正在检查')
-			const delay = Math.floor(Math.random() * MAX_DELAY * 1000) + 1000
+			delay = Math.floor(Math.random() * MAX_DELAY * 1000) + 1000
 
 			if (!/1\.5/.test($('.speedBox').attr('style'))) {
 				console.log('提升到1.5倍速')
@@ -25,7 +27,7 @@
 				console.log('静音')
 				$('.volumeIcon').click()
 			}
-			
+
 			if ($('.playButton').length > 0) {
 				console.log('点击播放')
 				$('.playButton').click()
